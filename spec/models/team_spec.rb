@@ -6,4 +6,5 @@ RSpec.describe Team do
     it { should have_many(:events) }
     it { should have_many(:competitions).through(:events) }
   end
+
 end
