@@ -43,4 +43,12 @@ RSpec.describe 'The competitions show page' do
     expect(page).to have_content("Average age of all players in the competition: #{expected}")
   end
 
+  it 'displays a link to register a new team which redirects to a new page' do
+
+    expect(page).to have_link("Register a new team")
+
+    click_link "Register a new team"
+
+    expect(current_path).to eq("/competitions/#{@competition1.id}/new")
+  end
 end
