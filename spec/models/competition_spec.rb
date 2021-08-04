@@ -26,7 +26,7 @@ RSpec.describe Competition do
       @event4 = Event.create!(competition: @competition2, team: @team2)
     end
 
-    describe '#average_age' do
+    describe '#average_age_of_players' do
       it 'determines the average age of all players in a competition' do
         expected = ((13 + 12 + 11 + 15) / 4.0)
         expect(@competition1.average_age_of_players).to eq(expected)
