@@ -11,7 +11,7 @@ RSpec.describe 'The competitions index page' do
     @player4 = @team2.players.create(name: 'mike', age: 15)
 
     @competition1 = Competition.create!(name: 'LLWS', location: 'Hersheytown', sport: 'baseball')
-    @competition1 = Competition.create!(name: 'BVWC', location: 'Hersheytown', sport: 'beach volleyball')
+    @competition2 = Competition.create!(name: 'BVWC', location: 'Hersheytown', sport: 'beach volleyball')
 
     @event1 = Event.create!(competition: @competition1, team: @team1)
     @event2 = Event.create!(competition: @competition1, team: @team2)
